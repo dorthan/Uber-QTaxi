@@ -23,6 +23,17 @@
     <link rel="stylesheet" href="css/all.css?V=202201111645">
 
     <!-- MEDIA CODE Start -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P7RMYNCS7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-3P7RMYNCS7');
+    </script>
+    
     <!-- MEDIA CODE End -->
 </head>
 
@@ -51,32 +62,32 @@
                             <label for="formControlRange">搭乘距離(公里)</label>
                             <input type="number" class="form-control" id="distance" min="1" max="500" step="1"
                                 maxlength="3">
-                            <input type="range" class="form-control-range custom-range" id="distanceRange" min="1" max="500" step="1"
-                                value="1">
+                            <input type="range" class="form-control-range custom-range" id="distanceRange" min="1"
+                                max="500" step="1" value="1">
                         </div>
 
                         <div class="form-group">
                             <label for="formControlRange">搭乘時間(分鐘)</label>
                             <input type="number" class="form-control" id="time" min="1" max="720" step="1"
                                 maxlength="3">
-                            <input type="range" class="form-control-range custom-range" id="timeRange" min="1" max="720" step="1"
-                                value="1">
+                            <input type="range" class="form-control-range custom-range" id="timeRange" min="1" max="720"
+                                step="1" value="1">
                         </div>
 
                         <div class="form-group">
                             <label for="formControlRange">動態加乘倍數</label>
                             <input type="number" class="form-control" id="multiplier" min="1.00" max="10.00" step="0.1"
                                 maxlength="2">
-                            <input type="range" class="form-control-range custom-range" id="multiplierRange" min="1" max="10"
-                                step="0.1" value="1">
+                            <input type="range" class="form-control-range custom-range" id="multiplierRange" min="1"
+                                max="10" step="0.1" value="1">
                         </div>
 
                         <p class="text">
                             應付車資總額 = <br>
-                            [ 基本費用 $39 
+                            [ 基本費用 $39
                             + (分鐘數 x 每分鐘 $1.7 )<br>
-                            + (公里數 x 每公里 $25 ) ] 
-                            x 動態加乘倍數  <br>                             
+                            + (公里數 x 每公里 $25 ) ]
+                            x 動態加乘倍數 <br>
                         </p>
 
 
@@ -92,8 +103,6 @@
     <script src="lib/jquery-1.11.3.min.js"></script>
     <script src="lib/countUp.min.js"></script>
     <script src="lib/bootstrap/bootstrap.min.js"></script>
-    <script src="//www.googletagmanager.com/gtag/js?id=UA-63182225-21" async></script>
-    <script src="js/ga.js"></script>
     <script src="js/index.js?v=202201111645"></script>
 
 
