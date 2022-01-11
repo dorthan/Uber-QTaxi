@@ -15,6 +15,10 @@ uberDrive = function () {
     var _distance = 0;      //搭乘距離(公里)    
     var _multiplier = 1;    //動態加乘倍數
 
+    var _timeMax = 720;
+    var _distanceMax = 500;
+    var _multiplierMax = 10;
+
 
 
     //private methods
@@ -34,7 +38,7 @@ uberDrive = function () {
         _multiplier = $("#multiplier").val();
 
         $("#distanceRange").val(_distance);
-        $("#timeRange").val(_time);        
+        $("#timeRange").val(_time);
         $("#multiplierRange").val(_multiplier);
 
         setData();
@@ -46,32 +50,32 @@ uberDrive = function () {
         _multiplier = $("#multiplierRange").val();
 
         $("#distance").val(_distance);
-        $("#time").val(_time);        
+        $("#time").val(_time);
         $("#multiplier").val(_multiplier);
 
-       
+
 
         setData();
     }
 
     function setData() {
 
-        if(_distance>500){_distance=500;}
-        if(_time>180){_time=180;}
-        if(_multiplier>10){_multiplier=10;}
+        if (_distance > _distanceMax) { _distance = _distanceMax; }
+        if (_time > _timeMax) { _time = _timeMax; }
+        if (_multiplier > _multiplierMax) { _multiplier = _multiplierMax; }
 
         $("#distance").val(_distance);
-        $("#time").val(_time);        
+        $("#time").val(_time);
         $("#multiplier").val(_multiplier);
         $("#distance").val(_distance);
-        $("#time").val(_time);        
+        $("#time").val(_time);
         $("#multiplier").val(_multiplier);
 
-        _totleAll = (_baseFee + (_time * _timeFee) + ( _distance * _distanceFee))*_multiplier;
+        _totleAll = (_baseFee + (_time * _timeFee) + (_distance * _distanceFee)) * _multiplier;
         _totalDriver = _totleAll * _driverFee;
 
-        $('#totalAll').val("NT$"+Math.round(_totleAll).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-        $('#totalDriver').val("NT$"+Math.round(_totalDriver).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+        $('#totalAll').val("NT$" + Math.round(_totleAll).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+        $('#totalDriver').val("NT$" + Math.round(_totalDriver).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
     }
 
 
