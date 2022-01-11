@@ -5,7 +5,7 @@ body {
 }
 
 .wrap {
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -18,10 +18,9 @@ main {
 }
 
 
-a {
-    display: inline-flex;
-    align-items: center;
-    color: $c-main;
-    text-decoration: underline;
+.text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFF;
 }
 
