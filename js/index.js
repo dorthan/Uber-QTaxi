@@ -74,8 +74,8 @@ uberDrive = function () {
         _totleAll = (_baseFee + (_time * _timeFee) + (_distance * _distanceFee)) * _multiplier;
         _totalDriver = _totleAll * _driverFee;
 
-        $('#totalAll').val("NT$" + Math.round(_totleAll).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-        $('#totalDriver').val("NT$" + Math.round(_totalDriver).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+        $('#totalAll').val("NT$" + (Math.round(_totleAll*100)/100).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+        $('#totalDriver').val("NT$" + (Math.round(_totalDriver*100)/100).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
     }
 
 
