@@ -10,31 +10,7 @@
         background: #cd2d39;
         padding: 1.5vw 3vw;
         line-height: 1;
-        margin-bottom: 6vw;
+        margin-bottom: 10px;
     }
 
-    &__text{
-        display: inline-block;
-        font-size: 4vw;        
-        line-height: 1.5;
-        color: #FFF;
-        text-align: left;
-    }
-
-}
-
-@media (min-width: $media-lg) {
-    .title {
-        &__h2 {
-            font-size: 3vw;
-            padding: 0.5vw 1vw;
-            margin-bottom: 3vw;
-        }
-
-        &__text{
-            display: inline-block;
-            font-size: 1.28vw;
-            color: #FFF;
-        }
-    }
 }

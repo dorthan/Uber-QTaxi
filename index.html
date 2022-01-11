@@ -32,13 +32,40 @@
         <!--main-->
         <main class="index container" id="main">
             <!-- testdrive -->
-            <section class="testdrive row" id="testdrive">
+            <section class="testdrive row justify-content-center" id="testdrive">
                 <div class="col-12 col-lg-6">
                     <h2 class="title__h2">Uber 車資計算</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="formControlRange">乘客費用</label>
+                            <input type="number" class="form-control" id="totalAll">
+                        </div>
 
-                    <h2 class="tital"></h2>
+                        <div class="form-group">
+                            <label for="formControlRange">司機所得</label>
+                            <input type="number" class="form-control" id="totalDriver">
+                        </div>
 
-                    <input type="number" />
+                        <div class="form-group">
+                            <label for="formControlRange">搭乘距離(公里)</label>
+                            <input type="number" class="form-control" id="distance">
+                            <input type="range" class="form-control-range" id="distanceRange">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formControlRange">搭乘時間(分鐘)</label>
+                            <input type="number" class="form-control" id="time">
+                            <input type="range" class="form-control-range" id="timeRange">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formControlRange">動態加乘倍數</label>
+                            <input type="number" class="form-control" id="multiplier">
+                            <input type="range" class="form-control-range" id="multiplierRange">
+                        </div>
+
+
+                    </form>
 
                 </div>
             </section>
