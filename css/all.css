@@ -4122,7 +4122,7 @@ input[type="button"].btn-block {
 
 .custom-range {
   width: 100%;
-  height: calc(1rem + 0.4rem);
+  height: calc(1.5rem + 0.4rem);
   padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
@@ -4152,9 +4152,9 @@ input[type="button"].btn-block {
 }
 
 .custom-range::-webkit-slider-thumb {
-  width: 1rem;
-  height: 1rem;
-  margin-top: -0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: -0.5rem;
   background-color: #007bff;
   border: 0;
   border-radius: 1rem;
@@ -4188,8 +4188,8 @@ input[type="button"].btn-block {
 }
 
 .custom-range::-moz-range-thumb {
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: #007bff;
   border: 0;
   border-radius: 1rem;
@@ -4223,8 +4223,8 @@ input[type="button"].btn-block {
 }
 
 .custom-range::-ms-thumb {
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin-top: 0;
   margin-right: 0.2rem;
   margin-left: 0.2rem;
@@ -4256,7 +4256,7 @@ input[type="button"].btn-block {
   cursor: pointer;
   background-color: transparent;
   border-color: transparent;
-  border-width: 0.5rem;
+  border-width: 0.75rem;
 }
 
 .custom-range::-ms-fill-lower {
