@@ -9,11 +9,12 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;    
 }
 
 main {
     min-height: 60vh;
+    padding: 20px !important;
 }
 
 
