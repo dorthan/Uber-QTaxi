@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+.testdrive{
+    position: relative;
+    background: #0f142a url(../images/bg/mb_testdrive.jpg) no-repeat center top ;
+    background-size: cover;
+    padding: 41vw 5vw 9vw 5vw;
+
+    .title{
+        &__h2{
+            margin-bottom: 10vw;
+        }
+    }
+}
+
+.form {
+    position: relative;
+    flex: 0 0 100%;
+    // width: 100%;
+    color: $c-white;
+  
+    .mcode {
+        display: flex;
+        align-items: center;
+
+        &__img {
+            line-height: 0;
+
+            img {
+                border: 1px solid transparent;
+                height: rem(40);
+            }
+        }
+
+        &__btn {
+            position: relative;
+            display: block;
+            width: 38px;
+            height: 38px;
+            flex: 0 0 38px;
+            border-radius: 0;
+            border: solid 1px $c-white;
+            background: $c-white;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.2);
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                width: auto !important;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+
+    &-control {
+        color: $c-main !important;
+        background: $c-white;
+        flex: 0 0 100%;
+        border-radius: 0;
+        border: solid 1px $c-white;
+        font-size: rem(14);
+        line-height: rem(26);
+        padding: rem(8);
+        height: 28px;
+
+        &:active,
+        &:visited,
+        &:focus {
+            color: $c-main !important;
+            background: $c-white;
+            border-color: $c-white;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+
+        &::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $c-main;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: $c-main;
+        }
+
+        &::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: $c-main;
+        }
+
+        &-plaintext{
+            background: $c-white;
+            padding: 0.375rem;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex: 0 0 100%;
+        background: $c-white;
+
+        .form-control {
+            flex: 1 1 auto;
+            border-left: none;
+            background-position-x: -10;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        span {
+            flex: 0 0 auto;
+            font-size: rem(15);
+            line-height: rem(28);
+            // margin-left: rem(5);
+        }
+    }
+
+    &-group {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: rem(15);
+    }
+
+    &-required {
+        position: relative;
+        display: inline-block;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: url(../images/icons/required.svg)no-repeat center;
+            position: absolute;
+            left: rem(-10);
+            top: rem(10);
+        }
+    }
+
+    &-submit {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: rem(18);
+        border-radius: 2px;
+        color: $c-white;
+        background: #cd2d39;
+        border: 2px solid #cd2d39;
+        border-radius: 30px;
+        padding: 10px 30px 10px 40px;
+        margin: 10vw auto rem(10) auto;
+        cursor: pointer;
+
+        z-index: 1;
+        overflow: hidden;
+
+        line-height: 1;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+            color: #FFF;
+            background: #0f142a;
+        }
+
+        &::after{
+            content: '';
+            background: url(../images/layout/arrow-btn.svg) no-repeat center;
+            background-size: contain;
+            width: 14px;
+            height: 14px;        
+            margin-left: 10px;
+        }
+    }
+}
+
+select {
+    color: $c-main;
+    background: $c-white;
+
+    &.form {
+        &-control {
+            /* 解决select下拉箭头在ios上不兼容的问题 */
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url(../images/layout/select-down.svg) no-repeat scroll 97% center transparent;
+
+            &::-ms-expand {
+                display: none;
+            }
+        }
+    }
+
+    option {
+        color: $c-main;
+    }
+}
+
+.modal {
+    &-content {
+        position: relative;
+        border-radius: 0;
+        border: none;
+        background: $c-white;
+    }
+
+    &-body {
+        padding: 20px;
+        color: $c-black;
+        font-weight: 100;       
+        &-bg{
+            max-height: 60vh;
+            overflow-y: auto;
+            background: $c-white;
+        }
+    }
+
+    &-close {
+        position: absolute;
+        right: 50%;
+        top: rem(-47);
+        color: $c-main;
+        font-size: rem(48);
+        width: rem(44);
+        height: rem(44);
+        object-fit: contain;
+        margin-right: rem(-22);
+      
+        background: url(../images/layout/close.svg) no-repeat center;
+        background-size: cover;
+
+        &:hover {
+            color: $c-main;
+            text-shadow: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+
+}
+
+@media (min-width: $media-lg) {
+
+    .testdrive{
+        background: #0f142a url(../images/bg/pc_testdrive.jpg) no-repeat center top ;
+        background-size: cover;
+        padding: 3vw 10vw 3vw 12vw;
+        height: 2204/3840*100vw;
+
+        .title{
+            &__h2{
+                margin-bottom: 6vw;
+            }
+        }
+    }
+
+    .form {
+        position: absolute;
+        left: 0;
+        top: 15vw;
+        padding: 0 10vw 0 12vw;
+        width: 100%;
+        .col-form-label{
+            text-align: right;
+        }
+        &-submit{
+            margin-top: 3vw;
+        }
+
+    }
+}
+

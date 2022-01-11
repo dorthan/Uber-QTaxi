@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+//vendors (Other Sass Framework, 主要的用途是用來整合第三方的 plugin 與 Framework)
+@import 
+"vendor/bootstrap/bootstrap",
+"vendor/animate/animate",
+"vendor/owl.carousel/owl.carousel";
+
+//module  (模組元件)
+@import
+"module/px2em",         //px2em
+"module/ellipsis",      //ellipsis
+"module/img-scale";     //img-scale
+
+
+
+//layout  (共用版型)
+@import
+"layout/base",              //base
+"layout/body",
+"layout/header",
+"layout/footer";
+
+
+//component    (各頁面主要內容)
+@import "component/title";
+@import "component/num";
+@import "component/owl";
+@import "component/kv";
+@import "component/performance1";
+@import "component/performance2";
+@import "component/appearance";
+@import "component/power";
+@import "component/variant";
+@import "component/testdrive";
+@import "component/modal";     
