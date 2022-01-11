@@ -10655,7 +10655,7 @@ body {
 }
 
 .wrap {
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10684,15 +10684,9 @@ a {
   text-decoration: underline;
 }
 
-@media (min-width: 992px) {
-  .wrap {
-    min-height: 60vh;
-  }
-}
-
 .title__h2 {
   display: inline-block;
-  font-size: 7vw;
+  font-size: 30px;
   font-weight: 600;
   color: #FFF;
   background: #cd2d39;
@@ -10704,10 +10698,6 @@ a {
 .testdrive {
   position: relative;
   background-size: cover;
-}
-
-.testdrive .title__h2 {
-  margin-bottom: 10vw;
 }
 
 .form {
@@ -10731,6 +10721,11 @@ a {
   line-height: 1;
   padding: 5px;
   height: auto;
+}
+
+.form-control[readonly] {
+  background-color: transparent;
+  color: yellow;
 }
 
 .form-control:active, .form-control:visited, .form-control:focus {

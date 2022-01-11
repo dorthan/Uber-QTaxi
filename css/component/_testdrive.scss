@@ -3,12 +3,6 @@
 .testdrive{
     position: relative;    
     background-size: cover;
-
-    .title{
-        &__h2{
-            margin-bottom: 10vw;
-        }
-    }
 }
 
 .form {
@@ -28,6 +22,10 @@
         line-height: 1;
         padding: 5px;
         height: auto;
+        &[readonly]{
+            background-color: transparent;
+            color: yellow;
+        }
 
         &:active,
         &:visited,

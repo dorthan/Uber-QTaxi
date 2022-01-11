@@ -5,7 +5,7 @@ body {
 }
 
 .wrap {
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -24,9 +24,3 @@ a {
     text-decoration: underline;
 }
 
-
-@media (min-width: $media-lg) {
-    .wrap {
-        min-height: 60vh;
-    }
-}

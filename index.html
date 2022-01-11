@@ -38,30 +38,33 @@
                     <form>
                         <div class="form-group">
                             <label for="formControlRange">乘客費用</label>
-                            <input type="number" class="form-control" id="totalAll">
+                            <input type="text" class="form-control disable" id="totalAll" readonly>
                         </div>
 
                         <div class="form-group">
                             <label for="formControlRange">司機所得</label>
-                            <input type="number" class="form-control" id="totalDriver">
+                            <input type="text" class="form-control" id="totalDriver" readonly>
                         </div>
 
                         <div class="form-group">
                             <label for="formControlRange">搭乘距離(公里)</label>
-                            <input type="number" class="form-control" id="distance">
-                            <input type="range" class="form-control-range" id="distanceRange">
+                            <input type="number" class="form-control" id="distance" min="1" max="500" step="1" maxlength="3">
+                            <input type="range" class="form-control-range" id="distanceRange" min="1" max="500" step="1"
+                                value="1">
                         </div>
 
                         <div class="form-group">
                             <label for="formControlRange">搭乘時間(分鐘)</label>
-                            <input type="number" class="form-control" id="time">
-                            <input type="range" class="form-control-range" id="timeRange">
+                            <input type="number" class="form-control" id="time" min="1" max="180" step="1" maxlength="3">
+                            <input type="range" class="form-control-range" id="timeRange" min="1" max="180" step="1"
+                                value="1">
                         </div>
 
                         <div class="form-group">
                             <label for="formControlRange">動態加乘倍數</label>
-                            <input type="number" class="form-control" id="multiplier">
-                            <input type="range" class="form-control-range" id="multiplierRange">
+                            <input type="number" class="form-control" id="multiplier" min="1.00" max="10.00" step="0.1" maxlength="2">
+                            <input type="range" class="form-control-range" id="multiplierRange" min="1" max="10"
+                                step="0.1" value="1">
                         </div>
 
 
