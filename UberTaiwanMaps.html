@@ -18,15 +18,14 @@
             background: #f0f0f0;
         }
 
-        #UberTaiwanMap{
+        #UberTaiwanMap {
             height: 100vh;
             width: 100%;
         }
 
-        path{
-            cursor:pointer;
+        path {
+            cursor: pointer;
         }
-
     </style>
 </head>
 
@@ -1059,15 +1058,17 @@
 
         $(function () {
             var _UberMap = new Array();
-            _UberMap = $.cookie('UberMap');
             console.log(_UberMap, _UberMap.length);
-            _UberMap = _UberMap.split(',');
+            if (_UberMap.length>0) {
+                _UberMap = $.cookie('UberMap').split(',');
+            }
+            console.log(_UberMap, _UberMap.length);
 
             for (var i = 0; i < _UberMap.length; i++) {
                 $("#" + _UberMap[i]).attr('fill', '#35ec74');
             }
 
-            
+
 
             $('path').on('click', function () {
 
