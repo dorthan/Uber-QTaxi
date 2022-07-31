@@ -1059,11 +1059,11 @@
 
         $(function () {
             var _UberMap = new Array();
-            _UberMap = $.cookie('UberMap').split(',');
+            _UberMap = $.cookie('UberMap');
             console.log(_UberMap, _UberMap.length);
+            _UberMap = _UberMap.split(',');
 
             for (var i = 0; i < _UberMap.length; i++) {
-
                 $("#" + _UberMap[i]).attr('fill', '#35ec74');
             }
 
