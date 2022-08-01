@@ -38,6 +38,7 @@
         height="1052.363px" viewBox="0 0 744.094 1052.363" enable-background="new 0 0 744.094 1052.363"
         xml:space="preserve">
 
+
         <g id="TaiwanMap">
 
             <g id="嘉義">
@@ -635,7 +636,7 @@
            L673.896,87.708z" />
             </g>
 
-            <g>
+            <g id="fix">
                 <path id="n11" inkscape:connector-curvature="0" fill="none" stroke="#808080" d="M432.857,201.15l0.408,0.859l1.107,0.553h1.771
             l1.218-0.442l0.996-0.774l1.219,0.442l1.66,1.991l0.442,1.439v1.329l3.541,0.997l1.758,1.306l0,0l0,0l1.328,0.664h2.544
             l0.773,0.996l1.33-0.554l1.106-0.885l3.098-0.222l-0.774,0.996l1.218,0.664l-0.885,1.108l-0.223,1.439l-0.775,1.217l-0.332,1.107
@@ -918,6 +919,8 @@
             </g>
         </g>
 
+
+
         <g id="Zahlen" display="block" style="pointer-events:none;">
             <text transform="matrix(1 0 0 1 401.0022 292.9473)" display="inline" fill="#666"
                 font-family="HelveticaNeue, Noto Sans TC, PingFangTC, Microsoft JhengHei, sans-serif"
@@ -968,12 +971,21 @@
                 font-family="HelveticaNeue, Noto Sans TC, PingFangTC, Microsoft JhengHei, sans-serif"
                 font-size="24">彰化</text>
         </g>
+
+
+
+
     </svg>
+
+
 
     <script src="./lib/jquery-1.11.3.min.js"></script>
     <script src="./lib/jquery.cookie.min.js"></script>
 
+
+
     <script>
+
         $(function () {
             var _UberMap = new Array();
 
@@ -987,7 +999,7 @@
             console.log(_UberMap, _UberMap.length);
 
             $('g').on('click', function () {
-                if ($(this).attr('id') != 'g7645') {
+                if ($(this).attr('id') != 'TaiwanMap' && $(this).attr('id') != 'fix') {
                     console.log($(this).attr('id'));
                     if ($(this).find('path').attr('fill') == '#FFF') {
                         $(this).find('path').attr('fill', '#35ec74');
@@ -998,16 +1010,11 @@
                     }
                 }
                 $.cookie('UberMap', _UberMap);
-            });
-
-            $('path').on('click', function () {
-                if ($(this).attr('id') != 'g7645') {
-                    console.log($(this).attr('id'));
-                }
-            });
+            });        
 
         })
     </script>
+
 </body>
 
 </html>
