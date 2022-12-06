@@ -53,8 +53,6 @@ uberDrive = function () {
         $("#time").val(_time);
         $("#multiplier").val(_multiplier);
 
-
-
         setData();
     }
 
